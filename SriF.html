@@ -3,11 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Swiggy Login</title>
+    <meta name="description" content="Login page for Veg & Non-Veg platform.">
+    <title>VEG & NON-VEG</title>
     <style>
         body {
             font-family: Arial, sans-serif;
-            background-color: #f8f8f8;
+            background-color: #3d3b9c;
+            background-image: url('c:\Users\badav\Downloads\VEG.webp');
+            background-size: cover;
+            background-position: center;
             margin: 0;
             padding: 0;
             display: flex;
@@ -26,20 +30,20 @@
         }
         .login-container h1 {
             margin-bottom: 1rem;
-            color: #fc8019;
+            color: #e90b0b;
         }
         .login-container input {
             width: 100%;
             padding: 0.75rem;
             margin: 0.5rem 0;
-            border: 1px solid #ccc;
+            border: 1px solid #f0eaea;
             border-radius: 4px;
             font-size: 1rem;
         }
         .login-container button {
             width: 100%;
             padding: 0.75rem;
-            background-color: #fc8019;
+            background-color: #dd0a0a;
             color: white;
             border: none;
             border-radius: 4px;
@@ -48,14 +52,14 @@
             margin-top: 1rem;
         }
         .login-container button:hover {
-            background-color: #e56d11;
+            background-color: #ed0808;
         }
         .login-container .links {
             margin-top: 1rem;
             font-size: 0.9rem;
         }
         .login-container .links a {
-            color: #fc8019;
+            color: #eb0909;
             text-decoration: none;
         }
         .login-container .links a:hover {
@@ -65,11 +69,21 @@
 </head>
 <body>
     <div class="login-container">
-        <h1>Swiggy</h1>
+        <h1>VEG & NON-VEG</h1>
         <form action="/login" method="POST">
-            <input type="text" name="email_or_phone" placeholder="Email or Phone Number" required>
-            <input type="password" name="password" placeholder="Password" required>
-            <button type="submit">Login</button>
+            <label for="first_name" hidden>First Name</label>
+            <input type="text" id="first_name" name="First_Name" placeholder="First Name" required>
+            
+            <label for="last_name" hidden>Last Name</label>
+            <input type="text" id="last_name" name="Last_Name" placeholder="Last Name" required>
+            
+            <label for="email_or_phone" hidden>Email or Phone Number</label>
+            <input type="text" id="email_or_phone" name="email_or_phone" placeholder="Email or Phone Number" required>
+            
+            <label for="password" hidden>Password</label>
+            <input type="password" id="password" name="password" placeholder="Password" required>
+            
+            <button type="submit" aria-label="Log in to Veg & Non-Veg platform">Login</button>
         </form>
         <div class="links">
             <a href="/forgot-password">Forgot Password?</a> | <a href="/signup">Sign Up</a>
